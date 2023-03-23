@@ -62,12 +62,13 @@ const brand = data.map(el => el.brand);
 const price = data.map(el => el.price);
 const doors = data.map(el => el.doors);
 const maxSpeed = data.map(el => el.maxSpeed);
-console.log(type);
-console.log(brand);
-console.log(price);
-console.log(doors);
-console.log(maxSpeed);
 
+//console.log(data);
+//console.log(type);
+//console.log(brand);
+//console.log(price);
+//console.log(doors);
+//console.log(maxSpeed);
 class Transport{
     constructor(type, brand, price){
 this.type = type;
@@ -75,10 +76,12 @@ this.brand = brand;
 this.price = price;
     }
     getInfo(){
-
+        let infoNew = (`Вид транспорта: ${this.type}. Модель: ${this.brand}.`);
+        return infoNew;
     }
     getPrice(){
-
+        let priceNew = (`Стоимость: ${this.price}`);
+        return priceNew;
     }
 }
 class Car extends Transport{
@@ -87,7 +90,8 @@ class Car extends Transport{
         this.doors = doors;
     }
     getDoorsCount(){
-
+let doorsNew = (`Количество дверей: ${this.doors}`);
+return doorsNew;
     }
 }
 class Bike extends Transport{
@@ -96,7 +100,17 @@ class Bike extends Transport{
         this.maxSpeed = maxSpeed;
     }
     getMaxSpeed(){
-
+            let speedNew = (`Максимальная скорость: ${this.maxSpeed}`);
+            return speedNew;
     }
 }
-console.log(data.type)
+let data1 = new Car(type[0], brand[0], price[0], doors[0]);
+let data2= new Car(type[1], brand[1], price[1], doors[1]);
+let data3 = new Bike(type[2], brand[2], price[2], maxSpeed[2]);
+let data4 = new Bike(type[3], brand[3], price[3], maxSpeed[3]);
+
+console.log(data3);
+console.log(data2.getInfo());
+console.log(data2.getPrice());
+console.log(data3.getMaxSpeed());
+console.log(data2.doors);
