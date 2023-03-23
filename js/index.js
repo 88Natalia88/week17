@@ -109,8 +109,17 @@ let data2= new Car(type[1], brand[1], price[1], doors[1]);
 let data3 = new Bike(type[2], brand[2], price[2], maxSpeed[2]);
 let data4 = new Bike(type[3], brand[3], price[3], maxSpeed[3]);
 
-console.log(data3);
+console.log(data4);
 console.log(data2.getInfo());
 console.log(data2.getPrice());
 console.log(data3.getMaxSpeed());
 console.log(data2.doors);
+
+
+const person = {
+    name: "Valera",
+    age: 23
+}
+let city = person.city
+city = "Amsterdam";
+console.log(person);
