@@ -114,12 +114,3 @@ console.log(data2.getInfo());
 console.log(data2.getPrice());
 console.log(data3.getMaxSpeed());
 console.log(data2.doors);
-
-
-const person = {
-    name: "Valera",
-    age: 23
-}
-let city = person.city
-city = "Amsterdam";
-console.log(person);
